@@ -1,0 +1,23 @@
+.postPreview {
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.postPreview div {
+  flex: 1;
+}
+
+.postPreview section {
+  flex: 1;
+  margin: 1rem;
+}
+
+.postPreview section h2 {
+  margin: 0 0 1rem 0;
+}
+
+.postPreview section p {
+  text-align: justify;
+}

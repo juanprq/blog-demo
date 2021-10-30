@@ -1,0 +1,17 @@
+.postCard {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.postCard section {
+  margin: 1rem;
+}
+
+.postCard h3 {
+  margin: 0;
+}
+
+.postCard p {
+  margin: 0.5rem 0;
+}

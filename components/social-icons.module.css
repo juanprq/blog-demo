@@ -1,0 +1,13 @@
+.icons {
+  display: flex;
+  font-size: 1.5rem;
+  border-left: 1px solid white;
+  line-height: 1rem;
+  margin-left: 1rem;
+  padding-left: 0.75rem;
+}
+
+.icons a {
+  color: white;
+  padding: 0 0.25rem;
+}
