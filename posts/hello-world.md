@@ -1,10 +1,11 @@
 ---
+slug: 'hello-world'
 title: 'Learn How to Pre-render Pages Using Static Generation with Next.js'
 excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
 coverImage: '/posts/post1.png'
 date: '2021-11-01T05:35:07.322Z'
 author:
-  name: Juan Pablo Ramírez
+  name: 'Juan Pablo Ramírez'
   picture: /authors/juanp.png
 ---
 
