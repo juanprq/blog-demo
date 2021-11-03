@@ -1,5 +1,4 @@
 ---
-slug: 'post-3'
 title: 'This is the post number 3'
 excerpt: 'this will be the description for the post #3'
 coverImage: '/posts/post3.jpeg'

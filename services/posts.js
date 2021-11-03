@@ -14,10 +14,11 @@ export const get = postName => {
   const body = fs.readFileSync(path.join(POSTS_PATH, postName), 'utf8');
   const frontMatter = matter(body);
   const html = marked(frontMatter.content);
+  const [slug] = postName.split('.');
 
   return {
     html,
-    data: { ...frontMatter.data },
+    data: { ...frontMatter.data, slug },
   };
 };
 
