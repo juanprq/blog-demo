@@ -5,12 +5,12 @@ import marked from 'marked';
 
 const POSTS_PATH = path.join(process.cwd(), 'posts');
 
-const loadPostFiles = () => {
+const loadFileNames = () => {
   const filePaths = fs.readdirSync(POSTS_PATH);
   return filePaths;
 };
 
-export const loadPost = postName => {
+export const get = postName => {
   const body = fs.readFileSync(path.join(POSTS_PATH, postName), 'utf8');
   const frontMatter = matter(body);
   const html = marked(frontMatter.content);
@@ -21,9 +21,9 @@ export const loadPost = postName => {
   };
 };
 
-export const loadAllPosts = () => {
-  const postPaths = loadPostFiles();
-  const posts = postPaths.map(loadPost);
+export const getAll = () => {
+  const postPaths = loadFileNames();
+  const posts = postPaths.map(get);
 
-  return posts.sort((a, b) => (a.data.date > b.data.date) ? 1 : -1);
+  return posts.sort((a, b) => (a.data.date < b.data.date) ? 1 : -1);
 };
