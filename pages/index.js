@@ -44,7 +44,7 @@ const Home = ({ posts }) => {
 export const getStaticProps = () => {
   const posts = postServices.getAll().slice(0, 10);
 
-  return { props: { posts: posts.map(p => ({ ...p, orig: null })) } };
+  return { props: { posts } };
 };
 
 export default Home;

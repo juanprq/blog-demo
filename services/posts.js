@@ -16,8 +16,8 @@ export const get = postName => {
   const html = marked(frontMatter.content);
 
   return {
-    ...frontMatter,
-    html
+    html,
+    data: { ...frontMatter.data },
   };
 };
 
