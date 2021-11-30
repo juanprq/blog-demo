@@ -2,17 +2,19 @@ import Head from 'next/head'
 
 import PostPreview from '../components/post-preview';
 import PostCard from '../components/post-card';
+import useConfig from '../hooks/use-config';
 import * as postServices from '../services/posts';
 
 import styles from './index.module.css';
 
 const Home = ({ posts }) => {
+  const { title } = useConfig();
   const [mainPost, ...rest] = posts;
 
   return (
     <>
       <Head>
-        <title>My Super Awesome Blog - Home</title>
+        <title>{title} - Home</title>
         <meta name="description" content="Home page of my super awesome blog" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

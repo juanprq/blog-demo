@@ -1,16 +1,21 @@
 import Head from 'next/head';
 
+import useConfig from '../../hooks/use-config';
 import * as postsService from '../../services/posts';
 
-const Post = ({ post }) => (
-  <>
-    <Head>
-      <title>My Super Awesome Blog! - {post.data.title}</title>
-    </Head>
-    <h1>{post.data.title}</h1>
-    <section dangerouslySetInnerHTML={{ __html: post.html }} />
-  </>
-);
+const Post = ({ post }) => {
+  const { title } = useConfig();
+
+  return (
+    <>
+      <Head>
+        <title>{title} - {post.data.title}</title>
+      </Head>
+      <h1>{post.data.title}</h1>
+      <section dangerouslySetInnerHTML={{ __html: post.html }} />
+    </>
+  );
+};
 
 export const getStaticPaths = () => {
   const posts = postsService.getAll();
