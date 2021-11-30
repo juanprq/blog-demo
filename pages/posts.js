@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import PostRow from '../components/post-row';
-import Buttons from '../components/buttons';
 
 import useConfig from '../hooks/use-config';
 import * as postsService from '../services/posts';
@@ -27,7 +26,6 @@ const Posts = ({ posts }) => {
           ))
         }
       </section>
-      <Buttons />
     </>
   );
 };
